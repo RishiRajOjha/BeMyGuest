@@ -1,0 +1,5 @@
+import Link from "next/link";
+import { Header } from "@/components/Header";
+import { SiteFooter } from "@/components/SiteFooter";
+const guides = ["What to Wear","What to Bring","Etiquette","How to Prepare","Family-Friendly Event Guides","Accessibility Information"];
+export default function GuestGuidesPage(){return <main className="min-h-screen bg-[color:var(--paper)]"><Header overlay={false}/><section className="container pb-24 pt-32 md:pt-44"><p className="eyebrow text-[color:var(--stone)]">Guest Guides</p><h1 className="display mt-4 max-w-5xl text-[clamp(3rem,8vw,7.5rem)] leading-[.92]">Arrive ready to take part.</h1><p className="mt-7 max-w-2xl text-lg leading-8 text-[color:var(--stone)]">Practical answers for someone attending an unfamiliar celebration or cultural experience.</p><div className="mt-16 grid gap-0 border-t border-[color:var(--line)] md:grid-cols-2">{guides.map(g=><Link key={g} href="/stories" className="group border-b border-[color:var(--line)] py-6 pr-8"><span className="display text-3xl">{g}</span><span className="ml-3 transition-transform group-hover:translate-x-1">↗</span></Link>)}</div></section><SiteFooter/></main>}

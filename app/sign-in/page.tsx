@@ -1,0 +1,4 @@
+import Link from "next/link";
+import { Header } from "@/components/Header";
+import { SiteFooter } from "@/components/SiteFooter";
+export default function SignInPage(){return <main className="min-h-screen bg-[color:var(--paper)]"><Header overlay={false}/><section className="container grid min-h-[75svh] place-items-center py-32"><div className="w-full max-w-xl text-center"><p className="eyebrow text-[color:var(--stone)]">Samaroh account</p><h1 className="display mt-4 text-6xl">Sign in</h1><p className="mt-5 leading-7 text-[color:var(--stone)]">Authentication is the next production integration. The current MVP keeps the route ready without pretending an auth system is already connected.</p><Link href="/explore" className="mt-8 inline-block border border-[color:var(--ink)] px-6 py-3 text-xs font-semibold uppercase tracking-[.14em]">Continue exploring</Link></div></section><SiteFooter/></main>}
